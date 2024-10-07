@@ -1,4 +1,4 @@
-## reset ## 원하는 시점 불러오기 ##
+## reset ## 원하는 시점 불러오기 ###################################################33
 
 
 C:\songsong\ST\2-2\OSS\myrepos>git log
@@ -81,5 +81,38 @@ bd8b30e HEAD@{1}: reset: moving to bd8b30e0d77f5097607bb4c1ab0e18b6c0f9da05
 62e946a (HEAD -> main, origin/main, origin/HEAD) HEAD@{2}: commit: game
 bd8b30e HEAD@{3}: commit: Add line
 b11d8cd HEAD@{4}: clone: from https://github.com/seoha376/myrepos.git
+
+C:\songsong\ST\2-2\OSS\myrepos>
+
+
+
+
+## git diff ## 파일에서 변한 부분 확인 #################################################################
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   first.txt
+
+
+C:\songsong\ST\2-2\OSS\myrepos>git diff
+
+C:\songsong\ST\2-2\OSS\myrepos>git diff --staged
+diff --git a/first.txt b/first.txt
+index c041aac..26d0b46 100644
+--- a/first.txt
++++ b/first.txt
+@@ -1,3 +1,5 @@
+ hello this is my first trial using my personal and public git hub.
+
+-I will add this line in this file. this is my second editing activity!
+\ No newline at end of file
++I will add this line in this file. this is my second editing activity!
++
++this is my third change.
+\ No newline at end of file
 
 C:\songsong\ST\2-2\OSS\myrepos>
