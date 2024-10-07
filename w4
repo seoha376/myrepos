@@ -115,4 +115,40 @@ index c041aac..26d0b46 100644
 +this is my third change.
 \ No newline at end of file
 
+
+## git reset으로 *로컬 파일을* 다른 시점으로 변경하기 ###################
+
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   first.txt
+
+
+C:\songsong\ST\2-2\OSS\myrepos>git reset first.txt
+Unstaged changes after reset:
+M       first.txt
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\songsong\ST\2-2\OSS\myrepos>git restore first.txt
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
 C:\songsong\ST\2-2\OSS\myrepos>
