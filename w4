@@ -152,3 +152,163 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 
 C:\songsong\ST\2-2\OSS\myrepos>
+
+
+
+## merge conflict 해결하기 ##############################################
+## 번외 : up to date 상태 해결하기... 서치로 안되더니 수업 따라가다보니 해결;; ##########
+
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+C:\songsong\ST\2-2\OSS\myrepos>git add .
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git commit -m "w4 forth first.txt file"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git commit -m "first.txt"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/seoha376/myrepos.git'
+
+C:\songsong\ST\2-2\OSS\myrepos>git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 2.42 KiB | 55.00 KiB/s, done.
+From https://github.com/seoha376/myrepos
+   3369a58..8de31ff  main       -> origin/main
+Updating 3369a58..8de31ff
+Fast-forward
+ w4 | 71 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 70 insertions(+), 1 deletion(-)
+
+C:\songsong\ST\2-2\OSS\myrepos>git commit -m "w4 first lecture's last file"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git push
+Everything up-to-date
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\songsong\ST\2-2\OSS\myrepos>git add README.md
+
+C:\songsong\ST\2-2\OSS\myrepos>git commit -m "Commit for learning solve merging conflicts"
+[main 7a19a94] Commit for learning solve merging conflicts
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\songsong\ST\2-2\OSS\myrepos>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.05 KiB | 39.00 KiB/s, done.
+From https://github.com/seoha376/myrepos
+   8de31ff..074d727  main       -> origin/main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\songsong\ST\2-2\OSS\myrepos>git commit -m "After solving merging conflicts"
+U       README.md
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\songsong\ST\2-2\OSS\myrepos>git add README.md
+
+C:\songsong\ST\2-2\OSS\myrepos>git commit -m "After solving merging conflicts"
+[main dd2a030] After solving merging conflicts
+
+C:\songsong\ST\2-2\OSS\myrepos>git pull
+Already up to date.
+
+C:\songsong\ST\2-2\OSS\myrepos>git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\songsong\ST\2-2\OSS\myrepos>
+
+
