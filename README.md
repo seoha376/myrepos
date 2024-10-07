@@ -1,4 +1,4 @@
-# OSS
+# OSS GIT TOO FUNNY CLASS
 
 hello! This is a my repository!
 
