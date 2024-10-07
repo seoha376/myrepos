@@ -1,0 +1,434 @@
+git CMD 열기
+
+git config --list
+
+git config --global user.name "josue"
+git config --global user.email jobregon@seoultech.ac.kr
+
+cd 경로 : 경로로 들어가기
+cd .. : 나오기
+
+git init : git repository 만들기
+* 숨긴 항목 체크하면 보임.
+
+dir : 디렉터리 확인
+dir /a : .git 추가 + 디렉터리 확인
+
+git clone [url]https://github.com/seoha376/myrepos.git : 로컬 데이터로 가져오기
+git status
+
+README.md 파일을 git status 로 확인할때 txt확장자인 문제 : 서치로 해결하기.
+git add [filnname] README.md : staged 상태로 바꾸기?
+git status : 빨간색에서 초록색으로 바뀐다.
+
+p.24 working tree
+p.34 lifecycle of the file status
+
+git commit -m "Add line" : 커밋. unmodified 상태.
+git status
+
+stack overflow? : 옵's 추천사이트
+
+
+
+C:\Users\user>GIT CONFIG
+git: 'CONFIG' is not a git command. See 'git --help'.
+
+C:\Users\user>git config
+error: no action specified
+
+C:\Users\user>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+
+C:\Users\user>git config --global user.name "josue"
+
+C:\Users\user>git config --global user.email jobregon@seoultech.ac.kr
+
+C:\Users\user>git help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+C:\Users\user>cd eclipse
+
+C:\Users\user\eclipse>cd ..
+
+C:\Users\user>Document
+'Document'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\user>cd Document
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user>cd Documents
+
+C:\Users\user\Documents>cd OSS
+
+C:\Users\user\Documents\OSS>git init
+Initialized empty Git repository in C:/Users/user/Documents/OSS/.git/
+
+C:\Users\user\Documents\OSS>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: C872-9C12
+
+ C:\Users\user\Documents\OSS 디렉터리
+
+2024-09-24  오전 11:13    <DIR>          .
+2024-09-24  오전 11:13    <DIR>          ..
+               0개 파일                   0 바이트
+               2개 디렉터리  380,600,336,384 바이트 남음
+
+C:\Users\user\Documents\OSS>dir /a
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: C872-9C12
+
+ C:\Users\user\Documents\OSS 디렉터리
+
+2024-09-24  오전 11:13    <DIR>          .
+2024-09-24  오전 11:13    <DIR>          ..
+2024-09-24  오전 11:13    <DIR>          .git
+               0개 파일                   0 바이트
+               3개 디렉터리  380,600,188,928 바이트 남음
+
+C:\Users\user\Documents\OSS>git clone https://github.com/seoha376/myrepos.git
+Cloning into 'myrepos'...
+warning: You appear to have cloned an empty repository.
+
+C:\Users\user\Documents\OSS>https://github.com/seoha376/myrepos.githttps://github.com/seoha376/myrepos.githttps://github.com/seoha376/myrepos.git
+'https:'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\user\Documents\OSS>test_local
+'test_local'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\user\Documents\OSS>cd test_local
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user\Documents\OSS>cd test_local
+
+C:\Users\user\Documents\OSS\test_local>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../myrepos/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\user\Documents\OSS\test_local>cd ..
+
+C:\Users\user\Documents\OSS>cd repos
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user\Documents\OSS>cd myreps
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user\Documents\OSS>cd myrepos
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\user\Documents\OSS\myrepos>git add READ.md
+fatal: pathspec 'READ.md' did not match any files
+
+C:\Users\user\Documents\OSS\myrepos>git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\user\Documents\OSS\myrepos>git add REAMDE.md.txt
+fatal: pathspec 'REAMDE.md.txt' did not match any files
+
+C:\Users\user\Documents\OSS\myrepos>git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+C:\Users\user\Documents\OSS\myrepos>git commit -m "Add line"
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\user\Documents\OSS\myrepos>git add README.md
+
+C:\Users\user\Documents\OSS\myrepos>git commit -m "Add line"
+[main (root-commit) 350c452] Add line
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+C:\Users\user\Documents\OSS\myrepos>git sttatus
+git: 'sttatus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+C:\Users\user\Documents\OSS\myrepos>git push
+info: please complete authentication in your browser...
+
+
+
+
+C:\Users\user>cd Documents
+
+C:\Users\user\Documents>cd myrepos
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user\Documents>cd ODD
+지정된 경로를 찾을 수 없습니다.
+
+C:\Users\user\Documents>cd OSS
+
+C:\Users\user\Documents\OSS>cd myrepos
+
+C:\Users\user\Documents\OSS\myrepos>git push
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 244 bytes | 244.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/seoha376/myrepos.git
+ * [new branch]      main -> main
+
+C:\Users\user\Documents\OSS\myrepos>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=josue
+user.email=jobregon@seoultech.ac.kr
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/seoha376/myrepos.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+
+C:\Users\user\Documents\OSS\myrepos>git config --unset user.name
+
+C:\Users\user\Documents\OSS\myrepos>git config --unset user.email
+
+C:\Users\user\Documents\OSS\myrepos>gir config --global "seoha376
+'gir'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\user\Documents\OSS\myrepos>git config --global "seoha376"
+error: key does not contain a section: seoha376
+
+C:\Users\user\Documents\OSS\myrepos>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 982 bytes | 98.00 KiB/s, done.
+From https://github.com/seoha376/myrepos
+   350c452..5ae24bd  main       -> origin/main
+Updating 350c452..5ae24bd
+Fast-forward
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\user\Documents\OSS\myrepos>git config --global user.name "seoha376"
+
+C:\Users\user\Documents\OSS\myrepos>git config --global user.email "seoha376@gmail.com"
+
+C:\Users\user\Documents\OSS\myrepos>git log
+commit 5ae24bdfc2a11f030816dd7674b3da7bd6c0b8aa (HEAD -> main, origin/main)
+Author: seoha376 <163660823+seoha376@users.noreply.github.com>
+Date:   Tue Sep 24 12:35:30 2024 +0900
+
+    Update README.md throught Github
+
+commit 350c452385d9003fb7540636a0fbdce522dc9eff
+Author: josue <jobregon@seoultech.ac.kr>
+Date:   Tue Sep 24 11:49:56 2024 +0900
+
+    Add line
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\user\Documents\OSS\myrepos>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+
+C:\Users\user\Documents\OSS\myrepos>git add README.md
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\user\Documents\OSS\myrepos>> git branch --unset-upstream
+'branch'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\user\Documents\OSS\myrepos>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+
+C:\Users\user\Documents\OSS\myrepos>git add README.md
+
+C:\Users\user\Documents\OSS\myrepos>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+C:\Users\user\Documents\OSS\myrepos>git commit -m "game"
+[main 8bbea2c] game
+ 1 file changed, 3 insertions(+)
+
+C:\Users\user\Documents\OSS\myrepos>git push
+To https://github.com/seoha376/myrepos.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/seoha376/myrepos.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\user\Documents\OSS\myrepos>
