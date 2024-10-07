@@ -1,0 +1,85 @@
+## reset ## 원하는 시점 불러오기 ##
+
+
+C:\songsong\ST\2-2\OSS\myrepos>git log
+commit 62e946a17f58c9e4efa903e454659bec8e2ab981 (HEAD -> main, origin/main, origin/HEAD)
+Author: seoha376 <seoha376@gmail.com>
+Date:   Tue Oct 8 02:22:56 2024 +0900
+
+    game
+
+commit bd8b30e0d77f5097607bb4c1ab0e18b6c0f9da05
+Author: seoha376 <seoha376@gmail.com>
+Date:   Tue Oct 8 02:19:03 2024 +0900
+
+    Add line
+
+commit b11d8cd8b71de38be53dc08c41ef0872fbc6f488
+Author: seoha376 <163660823+seoha376@users.noreply.github.com>
+Date:   Tue Sep 24 12:41:40 2024 +0900
+
+    Update README.md
+
+commit 5ae24bdfc2a11f030816dd7674b3da7bd6c0b8aa
+Author: seoha376 <163660823+seoha376@users.noreply.github.com>
+Date:   Tue Sep 24 12:35:30 2024 +0900
+
+    Update README.md throught Github
+
+commit 350c452385d9003fb7540636a0fbdce522dc9eff
+Author: josue <jobregon@seoultech.ac.kr>
+Date:   Tue Sep 24 11:49:56 2024 +0900
+
+    Add line
+
+C:\songsong\ST\2-2\OSS\myrepos>git reset --hard bd8b30e0d77f5097607bb4c1ab0e18b6c0f9da05
+HEAD is now at bd8b30e Add line
+
+C:\songsong\ST\2-2\OSS\myrepos>git reflog
+bd8b30e (HEAD -> main) HEAD@{0}: reset: moving to bd8b30e0d77f5097607bb4c1ab0e18b6c0f9da05
+62e946a (origin/main, origin/HEAD) HEAD@{1}: commit: game
+bd8b30e (HEAD -> main) HEAD@{2}: commit: Add line
+b11d8cd HEAD@{3}: clone: from https://github.com/seoha376/myrepos.git
+
+C:\songsong\ST\2-2\OSS\myrepos>git reset --hard 62e946a17f58c9e4efa903e454659bec8e2ab981
+HEAD is now at 62e946a game
+
+C:\songsong\ST\2-2\OSS\myrepos>git log
+commit 62e946a17f58c9e4efa903e454659bec8e2ab981 (HEAD -> main, origin/main, origin/HEAD)
+Author: seoha376 <seoha376@gmail.com>
+Date:   Tue Oct 8 02:22:56 2024 +0900
+
+    game
+
+commit bd8b30e0d77f5097607bb4c1ab0e18b6c0f9da05
+Author: seoha376 <seoha376@gmail.com>
+Date:   Tue Oct 8 02:19:03 2024 +0900
+
+    Add line
+
+commit b11d8cd8b71de38be53dc08c41ef0872fbc6f488
+Author: seoha376 <163660823+seoha376@users.noreply.github.com>
+Date:   Tue Sep 24 12:41:40 2024 +0900
+
+    Update README.md
+
+commit 5ae24bdfc2a11f030816dd7674b3da7bd6c0b8aa
+Author: seoha376 <163660823+seoha376@users.noreply.github.com>
+Date:   Tue Sep 24 12:35:30 2024 +0900
+
+    Update README.md throught Github
+
+commit 350c452385d9003fb7540636a0fbdce522dc9eff
+Author: josue <jobregon@seoultech.ac.kr>
+Date:   Tue Sep 24 11:49:56 2024 +0900
+
+    Add line
+
+C:\songsong\ST\2-2\OSS\myrepos>git reflog
+62e946a (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: reset: moving to 62e946a17f58c9eefa903e454659bec8e2ab981
+bd8b30e HEAD@{1}: reset: moving to bd8b30e0d77f5097607bb4c1ab0e18b6c0f9da05
+62e946a (HEAD -> main, origin/main, origin/HEAD) HEAD@{2}: commit: game
+bd8b30e HEAD@{3}: commit: Add line
+b11d8cd HEAD@{4}: clone: from https://github.com/seoha376/myrepos.git
+
+C:\songsong\ST\2-2\OSS\myrepos>
