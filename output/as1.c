@@ -1,0 +1,1 @@
+#include<studio.h>main(i){for(i=1;i<9999;)printf("%d,",i++);}
